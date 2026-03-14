@@ -13,11 +13,15 @@
     html, body {
       width: 100%;
       height: 100%;
-      background-color: Canvas;
-      color: CanvasText;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: flex-start;
+    }
+    @media (prefers-color-scheme: dark) {
+      html, body {
+        background-color: #191919;
+      }
     }
     iframe {
       width: 360px;
