@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chord Tool</title>
+  <title>Metronome</title>
   <style>
     * {
       margin: 0;
@@ -32,9 +32,11 @@
   </style>
 </head>
 <body>
-  <iframe
-    src="https://guitarapp.com/metronome.html?embed=true&tempo=120&timeSignature=2&pattern=1&theme=system"
-    title="Online Metronome Tool">
-  </iframe>
+  <iframe id="metronome-frame" title="Metronome"></iframe>
+  <script>
+    const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const url = `https://guitarapp.com/metronome.html?embed=true&tempo=120&timeSignature=2&pattern=1&theme=${theme}`;
+    document.getElementById('metronome-frame').src = url;
+  </script>
 </body>
 </html>
